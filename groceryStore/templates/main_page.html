@@ -1,0 +1,23 @@
+<!-- main_page.html -->
+
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Grocery Store Management System</h1>
+        <p>This is the main page of the system.</p>
+        <a href="{% url 'inventory' %}" class="btn btn-primary">Go to Inventory</a>
+        <a href="{% url 'add_product' %}" class="btn btn-success">Add Product</a>
+        <a href="{% url 'make_sale' %}" class="btn btn-info">Make Sale</a>
+    </div>
+</body>
+</html>

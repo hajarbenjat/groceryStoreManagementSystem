@@ -1,0 +1,23 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Product</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+        <a href="{% url 'inventory' %}" class="btn btn-secondary">Back to Inventory</a>
+    </div>
+</body>
+</html>
